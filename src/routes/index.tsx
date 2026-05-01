@@ -36,7 +36,7 @@ function HomePage() {
             International Real Estate &amp; Hospitality Management Company
           </h1>
           <p className="mt-6 max-w-2xl text-lg md:text-xl text-background/85 leading-relaxed">
-            Specialized in managing and operating lifestyle properties worldwide.
+            Combining real estate, hospitality management and a global demand network to operate lifestyle properties worldwide.
           </p>
           <div className="mt-10 flex flex-wrap gap-3">
             <Link to="/services" className="px-6 py-3 bg-background text-foreground text-sm tracking-wide hover:bg-secondary transition-colors">
@@ -59,7 +59,7 @@ function HomePage() {
               { k: "Operations", v: "Europe · Indonesia · LATAM · Middle East" },
               { k: "Asset model", v: "Third-party properties under management, lease & sublease agreements" },
               { k: "Revenue streams", v: "Brokerage commissions · Management fees · Revenue sharing" },
-              { k: "Clients", v: "International property owners, investors and guests (B2B & B2C)" },
+              { k: "Demand engine", v: "Global community network of surf & wellness users driving occupancy" },
             ].map((i) => (
               <div key={i.k}>
                 <div className="eyebrow">{i.k}</div>
@@ -77,14 +77,15 @@ function HomePage() {
           <div className="md:col-span-5">
             <div className="eyebrow">What we do</div>
             <h2 className="mt-4 text-4xl md:text-5xl leading-tight">
-              A focused operator across two core verticals.
+              A focused operator across three integrated verticals.
             </h2>
           </div>
           <p className="md:col-span-6 md:col-start-7 text-muted-foreground text-lg leading-relaxed">
             SWC structures, intermediates and manages lifestyle real estate
-            assets owned by third parties. Our work combines transactional
-            real estate services with day-to-day operation of premium
-            short and mid-term accommodation.
+            assets owned by third parties, operates them under hospitality
+            standards, and activates demand through a global community
+            network of surf and wellness users — a competitive advantage
+            that improves occupancy and revenue performance.
           </p>
         </div>
 
@@ -131,14 +132,45 @@ function HomePage() {
             className="md:col-span-5 aspect-[4/3] object-cover"
           />
           <div className="md:col-span-7">
-            <div className="eyebrow">03 — Secondary</div>
-            <h3 className="mt-2 text-2xl">Community &amp; Wellness Concept</h3>
+            <div className="eyebrow">03 — Strategic asset</div>
+            <h3 className="mt-2 text-2xl">Demand Generation — Global Community Network</h3>
             <p className="mt-3 text-muted-foreground leading-relaxed">
-              A complementary experience layer — wellness, surf and lifestyle
-              programming — offered exclusively to enhance the value of
-              managed properties and guest stays. This activity is ancillary
-              to our core real estate and hospitality operations.
+              SWC has access to a global community of surf and wellness
+              users, including a network of more than 5,000 surf schools,
+              yoga centers, wellness studios and retreat operators. This
+              network is not a commercial product: it is a demand engine
+              that channels qualified guests into the properties we
+              manage, supporting occupancy, reducing vacancy risk and
+              improving revenue performance.
             </p>
+            <Link to="/community" className="inline-block mt-5 text-sm border-b border-foreground pb-1 hover:opacity-70 transition-opacity">
+              Explore the demand network →
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* HOW WE GENERATE VALUE — value chain for banks */}
+      <section className="border-t border-border bg-secondary/40">
+        <div className="container-prose py-20">
+          <div className="eyebrow">How we generate value</div>
+          <h2 className="mt-3 text-3xl md:text-5xl leading-tight max-w-3xl">
+            A clear, traceable value chain — from sourcing to revenue.
+          </h2>
+          <div className="mt-12 grid md:grid-cols-5 gap-px bg-border border border-border">
+            {[
+              ["01", "Source", "Identify third-party real estate assets in target lifestyle destinations."],
+              ["02", "Structure", "Sign management, lease or sublease agreements with property owners."],
+              ["03", "Operate", "Run hospitality operations: front-of-house, housekeeping, maintenance, reporting."],
+              ["04", "Activate demand", "Channel qualified guests through our global community network."],
+              ["05", "Generate revenue", "Earn fees, revenue share and accommodation income under signed contracts."],
+            ].map(([n, t, c]) => (
+              <div key={n} className="bg-background p-6">
+                <div className="font-display text-2xl text-muted-foreground">{n}</div>
+                <div className="mt-3 font-medium">{t}</div>
+                <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{c}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

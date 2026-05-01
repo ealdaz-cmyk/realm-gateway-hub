@@ -21,8 +21,8 @@ function ServicesPage() {
     <>
       <PageHeader
         eyebrow="Services"
-        title="Two integrated service lines for lifestyle real estate."
-        intro="Our services cover the full lifecycle of a lifestyle property — from acquisition and contractual structuring to ongoing operation and revenue management."
+        title="Three integrated service lines for lifestyle real estate."
+        intro="Our services cover the full lifecycle of a lifestyle property — from acquisition and contractual structuring to ongoing operation, revenue management and demand activation through our global community network."
       />
 
       {/* Real Estate */}
@@ -93,6 +93,39 @@ function ServicesPage() {
             loading="lazy"
             className="md:col-span-5 md:order-2 order-1 aspect-[4/5] object-cover"
           />
+        </div>
+      </section>
+
+      {/* Demand Generation */}
+      <section className="border-t border-border">
+        <div className="container-prose py-20">
+          <div className="eyebrow">03 — Strategic service</div>
+          <h2 className="mt-3 text-4xl md:text-5xl leading-tight max-w-3xl">Demand Generation</h2>
+          <p className="mt-5 max-w-3xl text-muted-foreground text-lg leading-relaxed">
+            SWC operates a global demand network composed of surf, yoga
+            and wellness users and operators. This network is leveraged
+            exclusively to drive qualified demand into the real estate
+            assets we manage — improving occupancy, reducing dependency
+            on third-party OTAs and supporting RevPAR performance.
+          </p>
+          <ul className="mt-8 grid md:grid-cols-2 gap-px bg-border border border-border">
+            {[
+              ["Network access", "Connection with +5,000 surf schools, yoga centers, wellness studios and retreat operators worldwide."],
+              ["Qualified demand", "Channel of pre-qualified guests aligned with the positioning of managed properties."],
+              ["Direct distribution", "Reduces reliance on OTAs and lowers customer acquisition cost on operated assets."],
+              ["Revenue performance", "Higher occupancy and average length of stay translate into improved RevPAR for property owners."],
+            ].map(([t, c]) => (
+              <li key={t} className="bg-background p-6">
+                <div className="font-medium">{t}</div>
+                <div className="text-muted-foreground mt-1 text-sm leading-relaxed">{c}</div>
+              </li>
+            ))}
+          </ul>
+          <p className="mt-8 max-w-3xl text-foreground/80 leading-relaxed border-l-2 border-foreground pl-5">
+            Our community is not just a brand asset — it is a demand
+            engine that supports the performance of the real estate
+            assets we manage.
+          </p>
         </div>
       </section>
     </>

@@ -5,6 +5,7 @@ const NAV = [
   { to: "/about", label: "About" },
   { to: "/services", label: "Services" },
   { to: "/business-model", label: "Business Model" },
+  { to: "/community", label: "Community" },
   { to: "/global-presence", label: "Global Presence" },
   { to: "/legal", label: "Legal" },
   { to: "/contact", label: "Contact" },
@@ -19,7 +20,7 @@ function Logo() {
       <div className="leading-tight">
         <div className="font-display text-lg tracking-tight">Surf &amp; Wellness Community</div>
         <div className="text-[0.65rem] uppercase tracking-[0.2em] text-muted-foreground">
-          Real Estate · Hospitality
+          Real Estate · Hospitality · Demand Network
         </div>
       </div>
     </Link>

@@ -30,9 +30,9 @@ function Logo() {
 function Header() {
   return (
     <header className="sticky top-0 z-40 bg-background/85 backdrop-blur border-b border-border">
-      <div className="container-prose flex items-center justify-between h-20">
+      <div className="container-prose flex items-center justify-between gap-6 h-20">
         <Logo />
-        <nav className="hidden lg:flex items-center gap-7 text-sm">
+        <nav className="hidden xl:flex items-center gap-6 text-sm">
           {NAV.map((n) => (
             <Link
               key={n.to}
@@ -40,7 +40,7 @@ function Header() {
               activeProps={{ className: "text-foreground" }}
               inactiveProps={{ className: "text-muted-foreground hover:text-foreground" }}
               activeOptions={{ exact: n.to === "/" }}
-              className="transition-colors"
+              className="transition-colors whitespace-nowrap"
             >
               {n.label}
             </Link>
@@ -48,12 +48,12 @@ function Header() {
         </nav>
         <Link
           to="/contact"
-          className="hidden lg:inline-flex items-center px-4 py-2 text-sm border border-foreground/80 hover:bg-foreground hover:text-background transition-colors"
+          className="hidden xl:inline-flex items-center px-4 py-2 text-sm border border-foreground/80 hover:bg-foreground hover:text-background transition-colors whitespace-nowrap"
         >
           Contact
         </Link>
       </div>
-      <div className="lg:hidden border-t border-border">
+      <div className="xl:hidden border-t border-border">
         <nav className="container-prose flex gap-5 overflow-x-auto py-3 text-xs uppercase tracking-wider">
           {NAV.map((n) => (
             <Link

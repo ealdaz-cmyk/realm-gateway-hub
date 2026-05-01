@@ -10,6 +10,9 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as ServicesRouteImport } from './routes/services'
+import { Route as LegalRouteImport } from './routes/legal'
+import { Route as GlobalPresenceRouteImport } from './routes/global-presence'
+import { Route as ContactRouteImport } from './routes/contact'
 import { Route as BusinessModelRouteImport } from './routes/business-model'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
@@ -17,6 +20,21 @@ import { Route as IndexRouteImport } from './routes/index'
 const ServicesRoute = ServicesRouteImport.update({
   id: '/services',
   path: '/services',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LegalRoute = LegalRouteImport.update({
+  id: '/legal',
+  path: '/legal',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GlobalPresenceRoute = GlobalPresenceRouteImport.update({
+  id: '/global-presence',
+  path: '/global-presence',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
   getParentRoute: () => rootRouteImport,
 } as any)
 const BusinessModelRoute = BusinessModelRouteImport.update({
@@ -39,12 +57,18 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/business-model': typeof BusinessModelRoute
+  '/contact': typeof ContactRoute
+  '/global-presence': typeof GlobalPresenceRoute
+  '/legal': typeof LegalRoute
   '/services': typeof ServicesRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/business-model': typeof BusinessModelRoute
+  '/contact': typeof ContactRoute
+  '/global-presence': typeof GlobalPresenceRoute
+  '/legal': typeof LegalRoute
   '/services': typeof ServicesRoute
 }
 export interface FileRoutesById {
@@ -52,20 +76,48 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/business-model': typeof BusinessModelRoute
+  '/contact': typeof ContactRoute
+  '/global-presence': typeof GlobalPresenceRoute
+  '/legal': typeof LegalRoute
   '/services': typeof ServicesRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/about' | '/business-model' | '/services'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/business-model'
+    | '/contact'
+    | '/global-presence'
+    | '/legal'
+    | '/services'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about' | '/business-model' | '/services'
-  id: '__root__' | '/' | '/about' | '/business-model' | '/services'
+  to:
+    | '/'
+    | '/about'
+    | '/business-model'
+    | '/contact'
+    | '/global-presence'
+    | '/legal'
+    | '/services'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/business-model'
+    | '/contact'
+    | '/global-presence'
+    | '/legal'
+    | '/services'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
   BusinessModelRoute: typeof BusinessModelRoute
+  ContactRoute: typeof ContactRoute
+  GlobalPresenceRoute: typeof GlobalPresenceRoute
+  LegalRoute: typeof LegalRoute
   ServicesRoute: typeof ServicesRoute
 }
 
@@ -76,6 +128,27 @@ declare module '@tanstack/react-router' {
       path: '/services'
       fullPath: '/services'
       preLoaderRoute: typeof ServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/legal': {
+      id: '/legal'
+      path: '/legal'
+      fullPath: '/legal'
+      preLoaderRoute: typeof LegalRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/global-presence': {
+      id: '/global-presence'
+      path: '/global-presence'
+      fullPath: '/global-presence'
+      preLoaderRoute: typeof GlobalPresenceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/business-model': {
@@ -106,6 +179,9 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
   BusinessModelRoute: BusinessModelRoute,
+  ContactRoute: ContactRoute,
+  GlobalPresenceRoute: GlobalPresenceRoute,
+  LegalRoute: LegalRoute,
   ServicesRoute: ServicesRoute,
 }
 export const routeTree = rootRouteImport

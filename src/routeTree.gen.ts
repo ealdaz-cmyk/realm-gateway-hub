@@ -13,6 +13,7 @@ import { Route as ServicesRouteImport } from './routes/services'
 import { Route as LegalRouteImport } from './routes/legal'
 import { Route as GlobalPresenceRouteImport } from './routes/global-presence'
 import { Route as ContactRouteImport } from './routes/contact'
+import { Route as CommunityRouteImport } from './routes/community'
 import { Route as BusinessModelRouteImport } from './routes/business-model'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
@@ -37,6 +38,11 @@ const ContactRoute = ContactRouteImport.update({
   path: '/contact',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CommunityRoute = CommunityRouteImport.update({
+  id: '/community',
+  path: '/community',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const BusinessModelRoute = BusinessModelRouteImport.update({
   id: '/business-model',
   path: '/business-model',
@@ -57,6 +63,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/business-model': typeof BusinessModelRoute
+  '/community': typeof CommunityRoute
   '/contact': typeof ContactRoute
   '/global-presence': typeof GlobalPresenceRoute
   '/legal': typeof LegalRoute
@@ -66,6 +73,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/business-model': typeof BusinessModelRoute
+  '/community': typeof CommunityRoute
   '/contact': typeof ContactRoute
   '/global-presence': typeof GlobalPresenceRoute
   '/legal': typeof LegalRoute
@@ -76,6 +84,7 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/business-model': typeof BusinessModelRoute
+  '/community': typeof CommunityRoute
   '/contact': typeof ContactRoute
   '/global-presence': typeof GlobalPresenceRoute
   '/legal': typeof LegalRoute
@@ -87,6 +96,7 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/business-model'
+    | '/community'
     | '/contact'
     | '/global-presence'
     | '/legal'
@@ -96,6 +106,7 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/business-model'
+    | '/community'
     | '/contact'
     | '/global-presence'
     | '/legal'
@@ -105,6 +116,7 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/business-model'
+    | '/community'
     | '/contact'
     | '/global-presence'
     | '/legal'
@@ -115,6 +127,7 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
   BusinessModelRoute: typeof BusinessModelRoute
+  CommunityRoute: typeof CommunityRoute
   ContactRoute: typeof ContactRoute
   GlobalPresenceRoute: typeof GlobalPresenceRoute
   LegalRoute: typeof LegalRoute
@@ -151,6 +164,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ContactRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/community': {
+      id: '/community'
+      path: '/community'
+      fullPath: '/community'
+      preLoaderRoute: typeof CommunityRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/business-model': {
       id: '/business-model'
       path: '/business-model'
@@ -179,6 +199,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
   BusinessModelRoute: BusinessModelRoute,
+  CommunityRoute: CommunityRoute,
   ContactRoute: ContactRoute,
   GlobalPresenceRoute: GlobalPresenceRoute,
   LegalRoute: LegalRoute,

@@ -32,7 +32,7 @@ export const Route = createRootRoute({
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "Surf & Wellness Community — International Real Estate & Hospitality" },
       { name: "description", content: "Surf & Wellness Community is an international real estate and hospitality management company headquartered in Dubai, operating lifestyle properties across Europe, Indonesia, LATAM and the UAE." },
-      { name: "author", content: "Surf & Wellness Community FZ-LLC" },
+      { name: "author", content: "Primevest Commercial Investment and Management FZCO" },
       { property: "og:title", content: "Surf & Wellness Community" },
       { property: "og:description", content: "International real estate & hospitality management company headquartered in Dubai." },
       { property: "og:type", content: "website" },

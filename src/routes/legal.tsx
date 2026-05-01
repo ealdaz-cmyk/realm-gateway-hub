@@ -5,7 +5,7 @@ export const Route = createFileRoute("/legal")({
   head: () => ({
     meta: [
       { title: "Legal & Corporate — Surf & Wellness Community" },
-      { name: "description", content: "Corporate information about Surf & Wellness Community FZ-LLC: registration in the United Arab Emirates Free Zone, group structure, regulatory framework and B2B/B2C activity." },
+      { name: "description", content: "Corporate information about Primevest Commercial Investment and Management FZCO: registration in the United Arab Emirates Free Zone, group structure, regulatory framework and B2B/B2C activity." },
       { property: "og:title", content: "Legal & Corporate — Surf & Wellness Community" },
       { property: "og:description", content: "Corporate, regulatory and structural information." },
     ],
@@ -25,7 +25,7 @@ function LegalPage() {
       <section className="container-prose py-20 grid md:grid-cols-12 gap-12">
         <div className="md:col-span-7 space-y-10">
           {[
-            { t: "Registered entity", c: "Surf & Wellness Community FZ-LLC, a Free Zone company registered in Dubai, United Arab Emirates. The Dubai entity acts as the group's holding and contractual counterpart for international operations." },
+            { t: "Registered entity", c: "Primevest Commercial Investment and Management FZCO, a Free Zone company registered in Dubai, United Arab Emirates. The Dubai entity acts as the group's holding and contractual counterpart for international operations." },
             { t: "Group structure", c: "The holding company operates through local subsidiaries and contractual partners in each jurisdiction where managed assets are located. Each subsidiary complies with local corporate, tax and regulatory requirements." },
             { t: "Regulatory framework", c: "Real estate intermediation activities are conducted in compliance with the regulations of each market. Hospitality operations comply with applicable local accommodation and tax regulations. Where third-party real estate brokers, payment processors or property managers are involved, only licensed counterparts are used." },
             { t: "Activity profile", c: "B2B activity (with property owners, investors, institutional partners and local operators) and B2C activity (with hospitality guests). All counterparties are identified and contractually documented." },
@@ -43,9 +43,9 @@ function LegalPage() {
           <div className="eyebrow">Corporate identity</div>
           <dl className="mt-4 space-y-5 text-sm">
             {[
-              ["Legal name", "Surf & Wellness Community FZ-LLC"],
+              ["Legal name", "Primevest Commercial Investment and Management FZCO"],
               ["Jurisdiction", "United Arab Emirates"],
-              ["Registered office", "DMCC Free Zone, Dubai, UAE"],
+              ["Registered office", "Dubai Free Zone, United Arab Emirates"],
               ["Group function", "Holding & operating company"],
               ["Activity codes", "Real estate services · Hospitality management"],
               ["Reporting", "Annual financial statements per UAE Free Zone requirements"],
@@ -59,7 +59,7 @@ function LegalPage() {
           <p className="mt-8 text-xs text-muted-foreground leading-relaxed">
             For formal documentation requests (trade license, certificate of
             incorporation, UBO declarations), please contact our compliance
-            team at compliance@swc-group.com.
+            team at compliance@surfwellness.community.
           </p>
         </aside>
       </section>

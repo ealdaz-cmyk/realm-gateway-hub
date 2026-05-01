@@ -1,4 +1,5 @@
-import { Outlet, Link, createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
+import { Link, createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
+import { SiteLayout } from "../components/SiteLayout";
 
 import appCss from "../styles.css?url";
 
@@ -29,19 +30,24 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "Surf & Wellness Community — International Real Estate & Hospitality" },
+      { name: "description", content: "Surf & Wellness Community is an international real estate and hospitality management company headquartered in Dubai, operating lifestyle properties across Europe, Indonesia, LATAM and the UAE." },
+      { name: "author", content: "Surf & Wellness Community FZ-LLC" },
+      { property: "og:title", content: "Surf & Wellness Community" },
+      { property: "og:description", content: "International real estate & hospitality management company headquartered in Dubai." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
     ],
     links: [
       {
         rel: "stylesheet",
         href: appCss,
+      },
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap",
       },
     ],
   }),
@@ -65,5 +71,5 @@ function RootShell({ children }: { children: React.ReactNode }) {
 }
 
 function RootComponent() {
-  return <Outlet />;
+  return <SiteLayout />;
 }

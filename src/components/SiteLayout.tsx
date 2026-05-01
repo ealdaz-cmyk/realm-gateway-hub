@@ -87,22 +87,22 @@ function Footer() {
         <div>
           <div className="eyebrow mb-3">Headquarters</div>
           <address className="not-italic text-foreground/80 leading-relaxed">
-            Surf &amp; Wellness Community FZ-LLC<br />
-            DMCC Free Zone<br />
+            Primevest Commercial Investment and Management FZCO<br />
+            Dubai Free Zone<br />
             Dubai, United Arab Emirates
           </address>
         </div>
         <div>
           <div className="eyebrow mb-3">Contact</div>
           <ul className="space-y-1 text-foreground/80">
-            <li>info@swc-group.com</li>
-            <li>compliance@swc-group.com</li>
+            <li>info@surfwellness.community</li>
+            <li>compliance@surfwellness.community</li>
           </ul>
         </div>
       </div>
       <div className="border-t border-border">
         <div className="container-prose py-5 flex flex-col sm:flex-row gap-2 justify-between text-xs text-muted-foreground">
-          <div>© {new Date().getFullYear()} Surf &amp; Wellness Community FZ-LLC. All rights reserved.</div>
+          <div>© {new Date().getFullYear()} Primevest Commercial Investment and Management FZCO. All rights reserved. · www.surfwellness.community</div>
           <div>Registered in the United Arab Emirates · Free Zone Company</div>
         </div>
       </div>

@@ -6,7 +6,7 @@ export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
       { title: "Contact — Surf & Wellness Community" },
-      { name: "description", content: "Contact Surf & Wellness Community FZ-LLC. Headquarters: DMCC Free Zone, Dubai, United Arab Emirates." },
+      { name: "description", content: "Contact Primevest Commercial Investment and Management FZCO. Headquarters: Dubai Free Zone, United Arab Emirates." },
       { property: "og:title", content: "Contact — Surf & Wellness Community" },
       { property: "og:description", content: "Get in touch with our Dubai office." },
     ],
@@ -30,18 +30,18 @@ function ContactPage() {
           <div>
             <div className="eyebrow">Headquarters</div>
             <address className="not-italic mt-3 leading-relaxed">
-              Surf &amp; Wellness Community FZ-LLC<br />
-              DMCC Free Zone<br />
+              Primevest Commercial Investment and Management FZCO<br />
+              Dubai Free Zone<br />
               Dubai, United Arab Emirates
             </address>
           </div>
           <div>
             <div className="eyebrow">General enquiries</div>
-            <div className="mt-3">info@swc-group.com</div>
+            <div className="mt-3">info@surfwellness.community</div>
           </div>
           <div>
             <div className="eyebrow">Compliance &amp; corporate</div>
-            <div className="mt-3">compliance@swc-group.com</div>
+            <div className="mt-3">compliance@surfwellness.community</div>
           </div>
           <div>
             <div className="eyebrow">Office hours</div>

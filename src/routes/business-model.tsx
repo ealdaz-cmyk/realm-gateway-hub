@@ -88,6 +88,59 @@ function BusinessModelPage() {
           ))}
         </div>
       </section>
+
+      {/* Demand Layer */}
+      <section className="border-t border-border bg-secondary/40">
+        <div className="container-prose py-20">
+          <div className="eyebrow">Demand layer</div>
+          <h2 className="mt-3 text-3xl md:text-4xl max-w-3xl">
+            A proprietary demand engine reinforces the operating model.
+          </h2>
+          <p className="mt-5 max-w-3xl text-muted-foreground text-lg leading-relaxed">
+            In addition to the contractual frameworks above, SWC benefits
+            from access to a global community network of surf and
+            wellness users. This network operates as a structural demand
+            layer that channels qualified bookings into the properties
+            we manage.
+          </p>
+          <div className="mt-10 grid md:grid-cols-4 gap-px bg-border border border-border">
+            {[
+              ["Community", "Global network of surf and wellness users and operators."],
+              ["Traffic", "Direct channel of qualified guests to managed properties."],
+              ["Bookings", "Higher occupancy with reduced dependency on third-party OTAs."],
+              ["Revenue", "Improved RevPAR and stable cash flows for owners and the operator."],
+            ].map(([t, c]) => (
+              <div key={t} className="bg-background p-6">
+                <div className="font-medium">{t}</div>
+                <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{c}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* How we generate value */}
+      <section className="container-prose py-20">
+        <div className="eyebrow">How we generate value</div>
+        <h2 className="mt-3 text-3xl md:text-4xl max-w-3xl">
+          The full value chain, from sourcing to revenue.
+        </h2>
+        <ol className="mt-10 grid md:grid-cols-5 gap-px bg-border border border-border">
+          {[
+            ["01", "Source properties", "Identify third-party real estate in target lifestyle destinations."],
+            ["02", "Structure agreements", "Sign brokerage, management or lease/sublease contracts with owners."],
+            ["03", "Operate properties", "Provide professional hospitality management on a daily basis."],
+            ["04", "Activate demand", "Channel qualified guests through the SWC community network."],
+            ["05", "Generate revenue", "Earn fees, revenue share and accommodation income under signed contracts."],
+          ].map(([n, t, c]) => (
+            <li key={n} className="bg-background p-6 list-none">
+              <div className="font-display text-2xl text-muted-foreground">{n}</div>
+              <div className="mt-3 font-medium">{t}</div>
+              <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{c}</p>
+            </li>
+          ))}
+        </ol>
+      </section>
     </>
   );
 }

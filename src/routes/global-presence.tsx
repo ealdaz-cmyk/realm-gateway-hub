@@ -28,7 +28,7 @@ function GlobalPresencePage() {
       <PageHeader
         eyebrow="Global Presence"
         title="One operator. Four regions. Local execution everywhere we work."
-        intro="SWC operates internationally through a Dubai-headquartered structure with local subsidiaries and contractual relationships in each market."
+        intro="SWC operates internationally through a Dubai-headquartered structure with local subsidiaries and contractual relationships in each market — supported by a global community presence across key surf and wellness destinations."
       />
 
       <section className="container-prose py-20">

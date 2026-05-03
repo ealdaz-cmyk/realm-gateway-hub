@@ -21,13 +21,15 @@ const LEGAL_LINKS = [
 
 function Logo() {
   return (
-    <Link to="/" className="flex items-center gap-3 group">
-      <div className="h-9 w-9 bg-primary text-accent flex items-center justify-center font-bold text-lg leading-none border border-accent/40">
+    <Link to="/" className="flex items-center gap-3 group shrink-0 min-w-0">
+      <div className="h-9 w-9 shrink-0 bg-primary text-accent flex items-center justify-center font-bold text-lg leading-none border border-accent/40">
         P
       </div>
-      <div className="leading-tight">
-        <div className="font-bold text-lg tracking-tight text-foreground">Primevest Developments</div>
-        <div className="text-[0.65rem] uppercase tracking-[0.2em] text-muted-foreground font-medium">
+      <div className="leading-tight min-w-0">
+        <div className="font-bold text-base lg:text-lg tracking-tight text-foreground whitespace-nowrap">
+          Primevest Developments
+        </div>
+        <div className="hidden 2xl:block text-[0.6rem] uppercase tracking-[0.18em] text-muted-foreground font-medium whitespace-nowrap">
           Real Estate · Investment · Asset Management
         </div>
       </div>
@@ -38,9 +40,9 @@ function Logo() {
 function Header() {
   return (
     <header className="sticky top-0 z-40 bg-background/85 backdrop-blur border-b border-border">
-      <div className="container-prose flex items-center justify-between gap-6 h-20">
+      <div className="container-prose flex items-center justify-between gap-4 lg:gap-6 h-20">
         <Logo />
-        <nav className="hidden xl:flex items-center gap-6 text-sm font-medium">
+        <nav className="hidden lg:flex items-center gap-4 xl:gap-6 text-[0.8rem] xl:text-sm font-medium">
           {NAV.map((n) => (
             <Link
               key={n.to}
@@ -54,14 +56,8 @@ function Header() {
             </Link>
           ))}
         </nav>
-        <Link
-          to="/contact"
-          className="hidden xl:inline-flex items-center px-4 py-2 text-sm font-semibold bg-primary text-primary-foreground border-2 border-primary hover:bg-accent hover:text-accent-foreground hover:border-accent transition-colors whitespace-nowrap"
-        >
-          Contact
-        </Link>
       </div>
-      <div className="xl:hidden border-t border-border">
+      <div className="lg:hidden border-t border-border">
         <nav className="container-prose flex gap-5 overflow-x-auto py-3 text-xs uppercase tracking-wider">
           {NAV.map((n) => (
             <Link

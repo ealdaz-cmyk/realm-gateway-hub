@@ -5,9 +5,9 @@ import { useState } from "react";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact — Surf & Wellness Community" },
-      { name: "description", content: "Contact Primevest Commercial Investment and Management FZCO. Headquarters: Dubai Free Zone, United Arab Emirates." },
-      { property: "og:title", content: "Contact — Surf & Wellness Community" },
+      { title: "Contact — Primevest Developments" },
+      { name: "description", content: "Contact Primevest Commercial Investment and Management FZCO. Headquarters: IFZA Properties, Dubai Silicon Oasis, United Arab Emirates." },
+      { property: "og:title", content: "Contact — Primevest Developments" },
       { property: "og:description", content: "Get in touch with our Dubai office." },
     ],
   }),
@@ -31,7 +31,7 @@ function ContactPage() {
             <div className="eyebrow">Headquarters</div>
             <address className="not-italic mt-3 leading-relaxed">
               Primevest Commercial Investment and Management FZCO<br />
-              Dubai Free Zone<br />
+              IFZA Properties, Dubai Silicon Oasis<br />
               Dubai, United Arab Emirates
             </address>
           </div>
@@ -46,6 +46,10 @@ function ContactPage() {
           <div>
             <div className="eyebrow">Office hours</div>
             <div className="mt-3 text-muted-foreground">Sunday – Thursday, 09:00 – 18:00 GST</div>
+          </div>
+          <div>
+            <div className="eyebrow">Website</div>
+            <div className="mt-3">www.surfwellness.community</div>
           </div>
         </div>
 
@@ -65,6 +69,7 @@ function ContactPage() {
               <option>General enquiry</option>
               <option>Property owner — management proposal</option>
               <option>Investor enquiry</option>
+              <option>Real estate transaction</option>
               <option>Compliance / corporate documentation</option>
             </select>
           </div>

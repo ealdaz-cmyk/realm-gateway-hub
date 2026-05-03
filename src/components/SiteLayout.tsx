@@ -5,7 +5,7 @@ const NAV = [
   { to: "/about", label: "About" },
   { to: "/services", label: "Services" },
   { to: "/business-model", label: "Business Model" },
-  { to: "/community", label: "Community" },
+  { to: "/value", label: "How We Create Value" },
   { to: "/global-presence", label: "Global Presence" },
   { to: "/legal", label: "Legal" },
   { to: "/contact", label: "Contact" },
@@ -15,12 +15,12 @@ function Logo() {
   return (
     <Link to="/" className="flex items-center gap-3 group">
       <div className="h-9 w-9 rounded-sm bg-primary text-primary-foreground flex items-center justify-center font-display text-lg leading-none">
-        S
+        P
       </div>
       <div className="leading-tight">
-        <div className="font-display text-lg tracking-tight">Surf &amp; Wellness Community</div>
+        <div className="font-display text-lg tracking-tight">Primevest Developments</div>
         <div className="text-[0.65rem] uppercase tracking-[0.2em] text-muted-foreground">
-          Real Estate · Hospitality · Demand Network
+          Real Estate · Investment · Asset Management
         </div>
       </div>
     </Link>
@@ -78,18 +78,19 @@ function Footer() {
     <footer className="mt-32 border-t border-border bg-secondary/40">
       <div className="container-prose py-16 grid gap-12 md:grid-cols-4 text-sm">
         <div className="md:col-span-2">
-          <div className="font-display text-2xl tracking-tight">Surf &amp; Wellness Community</div>
+          <div className="font-display text-2xl tracking-tight">Primevest Developments</div>
           <p className="mt-3 text-muted-foreground max-w-md">
-            International real estate and hospitality management company,
-            headquartered in Dubai, operating across Europe, Indonesia,
-            Latin America and the Middle East.
+            International real estate, investment and asset management
+            company headquartered in Dubai, operating across Europe,
+            Southeast Asia, Central America and the Middle East.
           </p>
         </div>
         <div>
           <div className="eyebrow mb-3">Headquarters</div>
           <address className="not-italic text-foreground/80 leading-relaxed">
-            Primevest Commercial Investment and Management FZCO<br />
-            Dubai Free Zone<br />
+            Primevest Commercial Investment<br />
+            and Management FZCO<br />
+            IFZA Properties, Dubai Silicon Oasis<br />
             Dubai, United Arab Emirates
           </address>
         </div>
@@ -104,7 +105,7 @@ function Footer() {
       <div className="border-t border-border">
         <div className="container-prose py-5 flex flex-col sm:flex-row gap-2 justify-between text-xs text-muted-foreground">
           <div>© {new Date().getFullYear()} Primevest Commercial Investment and Management FZCO. All rights reserved. · www.surfwellness.community</div>
-          <div>Registered in the United Arab Emirates · Free Zone Company</div>
+          <div>Licensed by Dubai Integrated Economic Zones Authority (DIEZ)</div>
         </div>
       </div>
     </footer>

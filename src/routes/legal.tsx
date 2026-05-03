@@ -4,10 +4,10 @@ import { PageHeader } from "@/components/PageHeader";
 export const Route = createFileRoute("/legal")({
   head: () => ({
     meta: [
-      { title: "Legal & Corporate — Primevest Developments" },
-      { name: "description", content: "Corporate information about Primevest Commercial Investment and Management FZCO: registration in Dubai (IFZA), licensed activities, group structure and regulatory framework." },
-      { property: "og:title", content: "Legal & Corporate — Primevest Developments" },
-      { property: "og:description", content: "Corporate, regulatory and licensing information." },
+      { title: "Legal Notice — Primevest Developments" },
+      { name: "description", content: "Legal Notice of Primevest Commercial Investment and Management FZCO, operator of www.primevestdevelopments.site." },
+      { property: "og:title", content: "Legal Notice — Primevest Developments" },
+      { property: "og:description", content: "Legal Notice and corporate information." },
     ],
   }),
   component: LegalPage,
@@ -17,20 +17,18 @@ function LegalPage() {
   return (
     <>
       <PageHeader
-        eyebrow="Legal & Corporate"
-        title="Corporate, regulatory and licensing information."
-        intro="Primevest Developments is the operating brand of Primevest Commercial Investment and Management FZCO, a Free Zone company registered in Dubai under the Dubai Integrated Economic Zones Authority (DIEZ)."
+        eyebrow="Legal Notice"
+        title="Legal Notice."
+        intro="This website (www.primevestdevelopments.site) is operated by Primevest Commercial Investment and Management FZCO."
       />
 
       <section className="container-prose py-20 grid md:grid-cols-12 gap-12">
         <div className="md:col-span-7 space-y-10">
           {[
-            { t: "Registered entity", c: "Primevest Commercial Investment and Management FZCO, a Free Zone Company (FZCO) registered at IFZA Properties, Dubai Silicon Oasis, United Arab Emirates. The Dubai entity acts as the group's holding and contractual counterpart for international operations." },
-            { t: "Regulatory authority", c: "The company is licensed by the Dubai Integrated Economic Zones Authority (DIEZ), the federal authority overseeing the IFZA free zone in Dubai Silicon Oasis." },
-            { t: "Licensed activities", c: "Investment in Commercial Enterprises & Management · Commercial Brokers · Portal. All operational activities of the group fall within the scope of the activities authorized under the trade license." },
-            { t: "Group structure", c: "The Dubai holding company operates internationally through local counterparts and contractual partners in each jurisdiction where managed assets are located. Each counterpart complies with local corporate, tax and regulatory requirements." },
-            { t: "Regulatory framework", c: "Real estate intermediation activities are conducted in compliance with the regulations of each market. Hospitality and accommodation operations comply with applicable local regulations. Where licensed third parties are involved (real estate brokers, payment processors, property managers), only authorized counterparts are used." },
-            { t: "Compliance", c: "The group maintains internal procedures consistent with international standards on Know-Your-Customer (KYC) and Anti-Money-Laundering (AML), including counterparty identification, source-of-funds checks for material transactions, and transaction record-keeping." },
+            { t: "Purpose of the Website", c: "This website is intended to provide general information about the services offered by the Company, including real estate intermediation, asset management, and hospitality management. The content does not constitute financial, legal, or investment advice." },
+            { t: "Limitation of Liability", c: "The Company makes reasonable efforts to ensure the accuracy of the information provided. However, no guarantees are made regarding completeness or accuracy. The Company shall not be liable for any damages arising from the use of this website." },
+            { t: "Intellectual Property", c: "All content on this website (texts, graphics, logos) is the property of the Company unless otherwise stated. Unauthorized use or reproduction is strictly prohibited." },
+            { t: "Governing Law", c: "This website is governed by the laws and regulations of the United Arab Emirates." },
           ].map((b) => (
             <div key={b.t}>
               <h2 className="text-2xl">{b.t}</h2>
@@ -41,17 +39,17 @@ function LegalPage() {
         </div>
 
         <aside className="md:col-span-5 md:pl-10 md:border-l border-border">
-          <div className="eyebrow">Corporate identity</div>
+          <div className="eyebrow">Company information</div>
           <dl className="mt-4 space-y-5 text-sm">
             {[
               ["Company name", "Primevest Commercial Investment and Management FZCO"],
               ["Jurisdiction", "Dubai, United Arab Emirates"],
-              ["Authority", "Dubai Integrated Economic Zones Authority (DIEZ)"],
-              ["Registered office", "IFZA Properties, Dubai Silicon Oasis"],
               ["Legal form", "Free Zone Company (FZCO)"],
-              ["Activities", "Investment in Commercial Enterprises & Management · Commercial Brokers · Portal"],
-              ["Group function", "Holding & operating company"],
-              ["Reporting", "Annual financial statements per UAE Free Zone requirements"],
+              ["Registered Authority", "Dubai Integrated Economic Zones Authority (DIEZ)"],
+              ["Registered Address", "IFZA Properties, Dubai Silicon Oasis, Dubai, UAE"],
+              ["General inquiries", "info@primevestdevelopments.site"],
+              ["Compliance", "compliance@primevestdevelopments.site"],
+              ["Phone", "+34 616 601 184"],
             ].map(([k, v]) => (
               <div key={k} className="grid grid-cols-2 gap-4 border-b border-border pb-4">
                 <dt className="text-muted-foreground">{k}</dt>
@@ -59,11 +57,6 @@ function LegalPage() {
               </div>
             ))}
           </dl>
-          <p className="mt-8 text-xs text-muted-foreground leading-relaxed">
-            For formal documentation requests (trade license, certificate of
-            incorporation, UBO declarations), please contact our compliance
-            team at compliance@primevestdevelopments.site.
-          </p>
         </aside>
       </section>
     </>

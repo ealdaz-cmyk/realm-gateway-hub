@@ -78,7 +78,7 @@ function GlobalPresencePage() {
         </div>
       </section>
 
-      <section className="border-t border-border bg-secondary/40">
+      <section className="border-t border-border bg-secondary">
         <div className="container-prose py-20">
           <div className="eyebrow">Regions of operation</div>
           <h2 className="mt-3 text-3xl md:text-4xl max-w-3xl">Active markets and managed assets</h2>

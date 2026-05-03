@@ -44,7 +44,7 @@ function BusinessModelPage() {
       </section>
 
       {/* Contractual frameworks */}
-      <section className="border-t border-border bg-secondary/40">
+      <section className="border-t border-border bg-secondary">
         <div className="container-prose py-20">
           <div className="grid md:grid-cols-12 gap-10">
             <div className="md:col-span-5">
@@ -93,7 +93,7 @@ function BusinessModelPage() {
       </section>
 
       {/* Counterparties & flows */}
-      <section className="border-t border-border bg-secondary/40">
+      <section className="border-t border-border bg-secondary">
         <div className="container-prose py-20">
           <div className="eyebrow">Counterparties &amp; flows</div>
           <h2 className="mt-3 text-3xl md:text-4xl max-w-3xl">Clear, traceable flows between identified parties.</h2>

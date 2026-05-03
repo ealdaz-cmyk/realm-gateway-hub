@@ -62,7 +62,7 @@ function LegalPage() {
           <p className="mt-8 text-xs text-muted-foreground leading-relaxed">
             For formal documentation requests (trade license, certificate of
             incorporation, UBO declarations), please contact our compliance
-            team at compliance@surfwellness.community.
+            team at compliance@primevestdevelopments.site.
           </p>
         </aside>
       </section>

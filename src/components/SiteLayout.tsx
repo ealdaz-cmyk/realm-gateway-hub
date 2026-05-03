@@ -11,6 +11,13 @@ const NAV = [
   { to: "/contact", label: "Contact" },
 ] as const;
 
+const LEGAL_LINKS = [
+  { to: "/legal", label: "Legal Notice" },
+  { to: "/privacy-policy", label: "Privacy Policy" },
+  { to: "/cookies-policy", label: "Cookies Policy" },
+  { to: "/terms-and-conditions", label: "Terms & Conditions" },
+] as const;
+
 function Logo() {
   return (
     <Link to="/" className="flex items-center gap-3 group">
@@ -80,10 +87,23 @@ function Footer() {
         <div className="md:col-span-2">
           <div className="font-display text-2xl tracking-tight">Primevest Developments</div>
           <p className="mt-3 text-muted-foreground max-w-md">
+            Operated by Primevest Commercial Investment and Management FZCO.
             International real estate, investment and asset management
             company headquartered in Dubai, operating across Europe,
             Southeast Asia, Central America and the Middle East.
           </p>
+          <ul className="mt-6 flex flex-wrap gap-x-5 gap-y-2 text-xs uppercase tracking-wider">
+            {LEGAL_LINKS.map((l) => (
+              <li key={l.to}>
+                <Link
+                  to={l.to}
+                  className="text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  {l.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
         </div>
         <div>
           <div className="eyebrow mb-3">Headquarters</div>
@@ -91,20 +111,22 @@ function Footer() {
             Primevest Commercial Investment<br />
             and Management FZCO<br />
             IFZA Properties, Dubai Silicon Oasis<br />
-            Dubai, United Arab Emirates
+            Dubai, United Arab Emirates<br />
+            <span className="text-muted-foreground">License Authority: DIEZ</span>
           </address>
         </div>
         <div>
           <div className="eyebrow mb-3">Contact</div>
           <ul className="space-y-1 text-foreground/80">
-            <li>info@surfwellness.community</li>
-            <li>compliance@surfwellness.community</li>
+            <li>info@primevestdevelopments.site</li>
+            <li>compliance@primevestdevelopments.site</li>
+            <li>+34 616 601 184</li>
           </ul>
         </div>
       </div>
       <div className="border-t border-border">
         <div className="container-prose py-5 flex flex-col sm:flex-row gap-2 justify-between text-xs text-muted-foreground">
-          <div>© {new Date().getFullYear()} Primevest Commercial Investment and Management FZCO. All rights reserved. · www.surfwellness.community</div>
+          <div>© {new Date().getFullYear()} Primevest Commercial Investment and Management FZCO. All rights reserved. · www.primevestdevelopments.site</div>
           <div>Licensed by Dubai Integrated Economic Zones Authority (DIEZ)</div>
         </div>
       </div>

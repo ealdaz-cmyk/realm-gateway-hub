@@ -37,11 +37,15 @@ function ContactPage() {
           </div>
           <div>
             <div className="eyebrow">General enquiries</div>
-            <div className="mt-3">info@surfwellness.community</div>
+            <div className="mt-3">info@primevestdevelopments.site</div>
           </div>
           <div>
             <div className="eyebrow">Compliance &amp; corporate</div>
-            <div className="mt-3">compliance@surfwellness.community</div>
+            <div className="mt-3">compliance@primevestdevelopments.site</div>
+          </div>
+          <div>
+            <div className="eyebrow">Phone</div>
+            <div className="mt-3">+34 616 601 184</div>
           </div>
           <div>
             <div className="eyebrow">Office hours</div>
@@ -49,7 +53,7 @@ function ContactPage() {
           </div>
           <div>
             <div className="eyebrow">Website</div>
-            <div className="mt-3">www.surfwellness.community</div>
+            <div className="mt-3">www.primevestdevelopments.site</div>
           </div>
         </div>
 

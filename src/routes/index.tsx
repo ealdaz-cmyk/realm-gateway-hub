@@ -69,8 +69,6 @@ function HomePage() {
             A capital-efficient asset management platform.
           </h2>
           <div className="gold-divider mt-5" />
-          <div className="grid md:grid-cols-3 gap-10">
-          </div>
           <div className="mt-12 grid md:grid-cols-3 gap-10">
             {[
               { k: "Activity", v: "Real Estate · Investment · Asset Management" },

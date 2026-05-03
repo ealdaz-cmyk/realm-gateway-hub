@@ -16,6 +16,7 @@ const LEGAL_LINKS = [
   { to: "/privacy-policy", label: "Privacy Policy" },
   { to: "/cookies-policy", label: "Cookies Policy" },
   { to: "/terms-and-conditions", label: "Terms & Conditions" },
+  { to: "/disclaimer", label: "Disclaimer" },
 ] as const;
 
 function Logo() {

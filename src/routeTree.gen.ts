@@ -15,6 +15,7 @@ import { Route as ServicesRouteImport } from './routes/services'
 import { Route as PrivacyPolicyRouteImport } from './routes/privacy-policy'
 import { Route as LegalRouteImport } from './routes/legal'
 import { Route as GlobalPresenceRouteImport } from './routes/global-presence'
+import { Route as DisclaimerRouteImport } from './routes/disclaimer'
 import { Route as CookiesPolicyRouteImport } from './routes/cookies-policy'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as BusinessModelRouteImport } from './routes/business-model'
@@ -51,6 +52,11 @@ const GlobalPresenceRoute = GlobalPresenceRouteImport.update({
   path: '/global-presence',
   getParentRoute: () => rootRouteImport,
 } as any)
+const DisclaimerRoute = DisclaimerRouteImport.update({
+  id: '/disclaimer',
+  path: '/disclaimer',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const CookiesPolicyRoute = CookiesPolicyRouteImport.update({
   id: '/cookies-policy',
   path: '/cookies-policy',
@@ -83,6 +89,7 @@ export interface FileRoutesByFullPath {
   '/business-model': typeof BusinessModelRoute
   '/contact': typeof ContactRoute
   '/cookies-policy': typeof CookiesPolicyRoute
+  '/disclaimer': typeof DisclaimerRoute
   '/global-presence': typeof GlobalPresenceRoute
   '/legal': typeof LegalRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
@@ -96,6 +103,7 @@ export interface FileRoutesByTo {
   '/business-model': typeof BusinessModelRoute
   '/contact': typeof ContactRoute
   '/cookies-policy': typeof CookiesPolicyRoute
+  '/disclaimer': typeof DisclaimerRoute
   '/global-presence': typeof GlobalPresenceRoute
   '/legal': typeof LegalRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
@@ -110,6 +118,7 @@ export interface FileRoutesById {
   '/business-model': typeof BusinessModelRoute
   '/contact': typeof ContactRoute
   '/cookies-policy': typeof CookiesPolicyRoute
+  '/disclaimer': typeof DisclaimerRoute
   '/global-presence': typeof GlobalPresenceRoute
   '/legal': typeof LegalRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
@@ -125,6 +134,7 @@ export interface FileRouteTypes {
     | '/business-model'
     | '/contact'
     | '/cookies-policy'
+    | '/disclaimer'
     | '/global-presence'
     | '/legal'
     | '/privacy-policy'
@@ -138,6 +148,7 @@ export interface FileRouteTypes {
     | '/business-model'
     | '/contact'
     | '/cookies-policy'
+    | '/disclaimer'
     | '/global-presence'
     | '/legal'
     | '/privacy-policy'
@@ -151,6 +162,7 @@ export interface FileRouteTypes {
     | '/business-model'
     | '/contact'
     | '/cookies-policy'
+    | '/disclaimer'
     | '/global-presence'
     | '/legal'
     | '/privacy-policy'
@@ -165,6 +177,7 @@ export interface RootRouteChildren {
   BusinessModelRoute: typeof BusinessModelRoute
   ContactRoute: typeof ContactRoute
   CookiesPolicyRoute: typeof CookiesPolicyRoute
+  DisclaimerRoute: typeof DisclaimerRoute
   GlobalPresenceRoute: typeof GlobalPresenceRoute
   LegalRoute: typeof LegalRoute
   PrivacyPolicyRoute: typeof PrivacyPolicyRoute
@@ -217,6 +230,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof GlobalPresenceRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/disclaimer': {
+      id: '/disclaimer'
+      path: '/disclaimer'
+      fullPath: '/disclaimer'
+      preLoaderRoute: typeof DisclaimerRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/cookies-policy': {
       id: '/cookies-policy'
       path: '/cookies-policy'
@@ -261,6 +281,7 @@ const rootRouteChildren: RootRouteChildren = {
   BusinessModelRoute: BusinessModelRoute,
   ContactRoute: ContactRoute,
   CookiesPolicyRoute: CookiesPolicyRoute,
+  DisclaimerRoute: DisclaimerRoute,
   GlobalPresenceRoute: GlobalPresenceRoute,
   LegalRoute: LegalRoute,
   PrivacyPolicyRoute: PrivacyPolicyRoute,

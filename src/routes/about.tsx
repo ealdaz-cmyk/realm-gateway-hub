@@ -63,7 +63,7 @@ function AboutPage() {
         </aside>
       </section>
 
-      <section className="border-t border-border bg-secondary/40">
+      <section className="border-t border-border bg-secondary">
         <div className="container-prose py-20">
           <div className="eyebrow">Operating principles</div>
           <h2 className="mt-3 text-3xl md:text-4xl max-w-3xl">

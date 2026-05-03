@@ -10,9 +10,12 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as ValueRouteImport } from './routes/value'
+import { Route as TermsAndConditionsRouteImport } from './routes/terms-and-conditions'
 import { Route as ServicesRouteImport } from './routes/services'
+import { Route as PrivacyPolicyRouteImport } from './routes/privacy-policy'
 import { Route as LegalRouteImport } from './routes/legal'
 import { Route as GlobalPresenceRouteImport } from './routes/global-presence'
+import { Route as CookiesPolicyRouteImport } from './routes/cookies-policy'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as BusinessModelRouteImport } from './routes/business-model'
 import { Route as AboutRouteImport } from './routes/about'
@@ -23,9 +26,19 @@ const ValueRoute = ValueRouteImport.update({
   path: '/value',
   getParentRoute: () => rootRouteImport,
 } as any)
+const TermsAndConditionsRoute = TermsAndConditionsRouteImport.update({
+  id: '/terms-and-conditions',
+  path: '/terms-and-conditions',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ServicesRoute = ServicesRouteImport.update({
   id: '/services',
   path: '/services',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacyPolicyRoute = PrivacyPolicyRouteImport.update({
+  id: '/privacy-policy',
+  path: '/privacy-policy',
   getParentRoute: () => rootRouteImport,
 } as any)
 const LegalRoute = LegalRouteImport.update({
@@ -36,6 +49,11 @@ const LegalRoute = LegalRouteImport.update({
 const GlobalPresenceRoute = GlobalPresenceRouteImport.update({
   id: '/global-presence',
   path: '/global-presence',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CookiesPolicyRoute = CookiesPolicyRouteImport.update({
+  id: '/cookies-policy',
+  path: '/cookies-policy',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ContactRoute = ContactRouteImport.update({
@@ -64,9 +82,12 @@ export interface FileRoutesByFullPath {
   '/about': typeof AboutRoute
   '/business-model': typeof BusinessModelRoute
   '/contact': typeof ContactRoute
+  '/cookies-policy': typeof CookiesPolicyRoute
   '/global-presence': typeof GlobalPresenceRoute
   '/legal': typeof LegalRoute
+  '/privacy-policy': typeof PrivacyPolicyRoute
   '/services': typeof ServicesRoute
+  '/terms-and-conditions': typeof TermsAndConditionsRoute
   '/value': typeof ValueRoute
 }
 export interface FileRoutesByTo {
@@ -74,9 +95,12 @@ export interface FileRoutesByTo {
   '/about': typeof AboutRoute
   '/business-model': typeof BusinessModelRoute
   '/contact': typeof ContactRoute
+  '/cookies-policy': typeof CookiesPolicyRoute
   '/global-presence': typeof GlobalPresenceRoute
   '/legal': typeof LegalRoute
+  '/privacy-policy': typeof PrivacyPolicyRoute
   '/services': typeof ServicesRoute
+  '/terms-and-conditions': typeof TermsAndConditionsRoute
   '/value': typeof ValueRoute
 }
 export interface FileRoutesById {
@@ -85,9 +109,12 @@ export interface FileRoutesById {
   '/about': typeof AboutRoute
   '/business-model': typeof BusinessModelRoute
   '/contact': typeof ContactRoute
+  '/cookies-policy': typeof CookiesPolicyRoute
   '/global-presence': typeof GlobalPresenceRoute
   '/legal': typeof LegalRoute
+  '/privacy-policy': typeof PrivacyPolicyRoute
   '/services': typeof ServicesRoute
+  '/terms-and-conditions': typeof TermsAndConditionsRoute
   '/value': typeof ValueRoute
 }
 export interface FileRouteTypes {
@@ -97,9 +124,12 @@ export interface FileRouteTypes {
     | '/about'
     | '/business-model'
     | '/contact'
+    | '/cookies-policy'
     | '/global-presence'
     | '/legal'
+    | '/privacy-policy'
     | '/services'
+    | '/terms-and-conditions'
     | '/value'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -107,9 +137,12 @@ export interface FileRouteTypes {
     | '/about'
     | '/business-model'
     | '/contact'
+    | '/cookies-policy'
     | '/global-presence'
     | '/legal'
+    | '/privacy-policy'
     | '/services'
+    | '/terms-and-conditions'
     | '/value'
   id:
     | '__root__'
@@ -117,9 +150,12 @@ export interface FileRouteTypes {
     | '/about'
     | '/business-model'
     | '/contact'
+    | '/cookies-policy'
     | '/global-presence'
     | '/legal'
+    | '/privacy-policy'
     | '/services'
+    | '/terms-and-conditions'
     | '/value'
   fileRoutesById: FileRoutesById
 }
@@ -128,9 +164,12 @@ export interface RootRouteChildren {
   AboutRoute: typeof AboutRoute
   BusinessModelRoute: typeof BusinessModelRoute
   ContactRoute: typeof ContactRoute
+  CookiesPolicyRoute: typeof CookiesPolicyRoute
   GlobalPresenceRoute: typeof GlobalPresenceRoute
   LegalRoute: typeof LegalRoute
+  PrivacyPolicyRoute: typeof PrivacyPolicyRoute
   ServicesRoute: typeof ServicesRoute
+  TermsAndConditionsRoute: typeof TermsAndConditionsRoute
   ValueRoute: typeof ValueRoute
 }
 
@@ -143,11 +182,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ValueRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/terms-and-conditions': {
+      id: '/terms-and-conditions'
+      path: '/terms-and-conditions'
+      fullPath: '/terms-and-conditions'
+      preLoaderRoute: typeof TermsAndConditionsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/services': {
       id: '/services'
       path: '/services'
       fullPath: '/services'
       preLoaderRoute: typeof ServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacy-policy': {
+      id: '/privacy-policy'
+      path: '/privacy-policy'
+      fullPath: '/privacy-policy'
+      preLoaderRoute: typeof PrivacyPolicyRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/legal': {
@@ -162,6 +215,13 @@ declare module '@tanstack/react-router' {
       path: '/global-presence'
       fullPath: '/global-presence'
       preLoaderRoute: typeof GlobalPresenceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cookies-policy': {
+      id: '/cookies-policy'
+      path: '/cookies-policy'
+      fullPath: '/cookies-policy'
+      preLoaderRoute: typeof CookiesPolicyRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/contact': {
@@ -200,9 +260,12 @@ const rootRouteChildren: RootRouteChildren = {
   AboutRoute: AboutRoute,
   BusinessModelRoute: BusinessModelRoute,
   ContactRoute: ContactRoute,
+  CookiesPolicyRoute: CookiesPolicyRoute,
   GlobalPresenceRoute: GlobalPresenceRoute,
   LegalRoute: LegalRoute,
+  PrivacyPolicyRoute: PrivacyPolicyRoute,
   ServicesRoute: ServicesRoute,
+  TermsAndConditionsRoute: TermsAndConditionsRoute,
   ValueRoute: ValueRoute,
 }
 export const routeTree = rootRouteImport

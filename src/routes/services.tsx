@@ -6,10 +6,10 @@ import hospitality from "@/assets/hospitality.jpg";
 export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
-      { title: "Services — Surf & Wellness Community" },
-      { name: "description", content: "Real estate brokerage, asset management, lease and sublease structuring, and hospitality operations for lifestyle properties." },
-      { property: "og:title", content: "Services — Surf & Wellness Community" },
-      { property: "og:description", content: "Real estate and hospitality management services for international property owners and investors." },
+      { title: "Services — Primevest Developments" },
+      { name: "description", content: "Real estate intermediation, asset management, hospitality management, and lease & operations services for international property owners and investors." },
+      { property: "og:title", content: "Services — Primevest Developments" },
+      { property: "og:description", content: "Real estate, asset and hospitality management services." },
       { property: "og:image", content: realEstate },
     ],
   }),
@@ -21,35 +21,35 @@ function ServicesPage() {
     <>
       <PageHeader
         eyebrow="Services"
-        title="Three integrated service lines for lifestyle real estate."
-        intro="Our services cover the full lifecycle of a lifestyle property — from acquisition and contractual structuring to ongoing operation, revenue management and demand activation through our global community network."
+        title="Four service lines covering the full real estate value chain."
+        intro="From acquisition and brokerage to asset management, hospitality operations and lease structures — Primevest Developments offers institutional clients a single counterpart for the management of international real estate assets."
       />
 
-      {/* Real Estate */}
+      {/* A. Real Estate Intermediation */}
       <section className="container-prose py-20 grid md:grid-cols-12 gap-12">
         <img
           src={realEstate}
-          alt="Real estate services"
+          alt="Real estate intermediation"
           width={1280}
           height={960}
           loading="lazy"
           className="md:col-span-5 aspect-[4/5] object-cover"
         />
         <div className="md:col-span-7">
-          <div className="eyebrow">01 — Core business</div>
-          <h2 className="mt-3 text-4xl md:text-5xl leading-tight">Real Estate</h2>
+          <div className="eyebrow">A — Core business</div>
+          <h2 className="mt-3 text-4xl md:text-5xl leading-tight">Real Estate Intermediation</h2>
           <p className="mt-5 text-muted-foreground text-lg leading-relaxed">
-            We act as an intermediary and asset manager for third-party
-            property owners and international investors interested in
-            tourism-oriented real estate.
+            We act as broker and counterpart in real estate transactions
+            on behalf of property owners and international investors,
+            sourcing, structuring and closing acquisitions and disposals
+            of qualifying assets.
           </p>
           <ul className="mt-8 divide-y divide-border border-y border-border">
             {[
-              ["Brokerage on third-party purchases", "Sourcing, due diligence support and transaction coordination for buyers acquiring lifestyle properties internationally."],
-              ["Sale of properties to international investors", "Structured marketing and disposal of qualifying assets on behalf of owners."],
-              ["Real estate transaction structuring", "Coordination of contractual, fiscal and corporate aspects of cross-border real estate transactions in cooperation with local advisors."],
-              ["Tourism real estate asset management", "Day-to-day asset management of tourism properties: maintenance oversight, capex planning, owner reporting."],
-              ["Lease & sublease contracts", "Negotiation and execution of long-term lease and sublease agreements that allow SWC to operate properties under defined commercial terms."],
+              ["Acquisition of third-party assets", "Sourcing, due diligence support and transaction coordination for the purchase of real estate assets in target markets."],
+              ["Sale of assets to investors", "Structured marketing and disposal of qualifying real estate assets to qualified institutional and private investors."],
+              ["Real estate brokerage", "Intermediation between buyers and sellers under formal brokerage mandates, with transparent commission structures."],
+              ["Transaction structuring", "Coordination of contractual, fiscal and corporate aspects of cross-border real estate transactions in cooperation with licensed local advisors."],
             ].map(([t, c]) => (
               <li key={t} className="py-5">
                 <div className="font-medium">{t}</div>
@@ -60,23 +60,51 @@ function ServicesPage() {
         </div>
       </section>
 
-      {/* Hospitality */}
+      {/* B. Asset Management */}
       <section className="border-t border-border bg-secondary/40">
+        <div className="container-prose py-20">
+          <div className="eyebrow">B — Core business</div>
+          <h2 className="mt-3 text-4xl md:text-5xl leading-tight">Asset Management</h2>
+          <p className="mt-5 max-w-3xl text-muted-foreground text-lg leading-relaxed">
+            We provide professional asset management services on real
+            estate assets owned by third parties under formal management
+            agreements, with the objective of optimizing asset performance
+            and protecting owner interests.
+          </p>
+          <div className="mt-10 grid md:grid-cols-2 gap-px bg-border border border-border">
+            {[
+              ["Asset performance management", "Active management of real estate assets to optimize income, occupancy and long-term value."],
+              ["Profitability optimization", "Cost control, revenue management and operational efficiency to maximize net returns for owners."],
+              ["Operational management", "Coordination of maintenance, capex planning, supplier management and on-site operations."],
+              ["Revenue management & reporting", "Pricing, distribution and periodic financial reporting to property owners and investors."],
+            ].map(([t, c]) => (
+              <div key={t} className="bg-background p-6">
+                <div className="font-medium">{t}</div>
+                <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{c}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* C. Hospitality Management */}
+      <section className="border-t border-border">
         <div className="container-prose py-20 grid md:grid-cols-12 gap-12">
           <div className="md:col-span-7 md:order-1 order-2">
-            <div className="eyebrow">02 — Core business</div>
+            <div className="eyebrow">C — Operational line</div>
             <h2 className="mt-3 text-4xl md:text-5xl leading-tight">Hospitality Management</h2>
             <p className="mt-5 text-muted-foreground text-lg leading-relaxed">
-              We operate accommodations on behalf of property owners under
-              management or lease agreements, generating revenue from guest
-              stays and associated services.
+              We operate accommodations on behalf of owners under
+              management agreements, generating revenue from guest stays
+              and associated services in compliance with local accommodation
+              regulations.
             </p>
             <ul className="mt-8 divide-y divide-border border-y border-border">
               {[
-                ["Operational management of accommodations", "Front-of-house, housekeeping, maintenance coordination, supplier management and on-site guest support."],
-                ["Occupancy & revenue optimization", "Pricing, distribution and channel management to maximize net revenue for the owner and the operator."],
-                ["Guest experience services", "Standardized hospitality services including wellness, surf and lifestyle programming as a value-added layer."],
-                ["Revenue management & reporting", "Periodic financial reporting to owners, KPI tracking and cash management on operated assets."],
+                ["Operation of accommodations", "Direct or third-party management of accommodation assets under formal contracts."],
+                ["Operations on behalf of owners", "Front-of-house, housekeeping, maintenance, supplier management and guest support on owner's account."],
+                ["Occupancy optimization", "Pricing, distribution and channel management to maximize occupancy and net revenue."],
+                ["Reporting & cash management", "Periodic financial reporting, KPI tracking and cash management on operated assets."],
               ].map(([t, c]) => (
                 <li key={t} className="py-5">
                   <div className="font-medium">{t}</div>
@@ -96,36 +124,29 @@ function ServicesPage() {
         </div>
       </section>
 
-      {/* Demand Generation */}
-      <section className="border-t border-border">
+      {/* D. Lease & Operations */}
+      <section className="border-t border-border bg-secondary/40">
         <div className="container-prose py-20">
-          <div className="eyebrow">03 — Strategic service</div>
-          <h2 className="mt-3 text-4xl md:text-5xl leading-tight max-w-3xl">Demand Generation</h2>
+          <div className="eyebrow">D — Operational line</div>
+          <h2 className="mt-3 text-4xl md:text-5xl leading-tight">Lease &amp; Operations</h2>
           <p className="mt-5 max-w-3xl text-muted-foreground text-lg leading-relaxed">
-            SWC operates a global demand network composed of surf, yoga
-            and wellness users and operators. This network is leveraged
-            exclusively to drive qualified demand into the real estate
-            assets we manage — improving occupancy, reducing dependency
-            on third-party OTAs and supporting RevPAR performance.
+            Primevest Developments enters into long-term lease agreements
+            with property owners and operates the leased assets directly,
+            including under sublease structures, retaining the operating
+            margin within a defined contractual framework.
           </p>
-          <ul className="mt-8 grid md:grid-cols-2 gap-px bg-border border border-border">
+          <div className="mt-10 grid md:grid-cols-3 gap-px bg-border border border-border">
             {[
-              ["Network access", "Connection with +5,000 surf schools, yoga centers, wellness studios and retreat operators worldwide."],
-              ["Qualified demand", "Channel of pre-qualified guests aligned with the positioning of managed properties."],
-              ["Direct distribution", "Reduces reliance on OTAs and lowers customer acquisition cost on operated assets."],
-              ["Revenue performance", "Higher occupancy and average length of stay translate into improved RevPAR for property owners."],
+              ["Lease acquisition", "Negotiation and execution of long-term lease contracts with property owners under defined commercial terms."],
+              ["Direct operation", "Direct exploitation of leased assets, including all operational, commercial and reporting obligations."],
+              ["Sublease structures", "Structured sublease arrangements that allow controlled re-commercialization of leased properties."],
             ].map(([t, c]) => (
-              <li key={t} className="bg-background p-6">
+              <div key={t} className="bg-background p-6">
                 <div className="font-medium">{t}</div>
-                <div className="text-muted-foreground mt-1 text-sm leading-relaxed">{c}</div>
-              </li>
+                <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{c}</p>
+              </div>
             ))}
-          </ul>
-          <p className="mt-8 max-w-3xl text-foreground/80 leading-relaxed border-l-2 border-foreground pl-5">
-            Our community is not just a brand asset — it is a demand
-            engine that supports the performance of the real estate
-            assets we manage.
-          </p>
+          </div>
         </div>
       </section>
     </>

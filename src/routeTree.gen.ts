@@ -9,15 +9,20 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as ValueRouteImport } from './routes/value'
 import { Route as ServicesRouteImport } from './routes/services'
 import { Route as LegalRouteImport } from './routes/legal'
 import { Route as GlobalPresenceRouteImport } from './routes/global-presence'
 import { Route as ContactRouteImport } from './routes/contact'
-import { Route as CommunityRouteImport } from './routes/community'
 import { Route as BusinessModelRouteImport } from './routes/business-model'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 
+const ValueRoute = ValueRouteImport.update({
+  id: '/value',
+  path: '/value',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ServicesRoute = ServicesRouteImport.update({
   id: '/services',
   path: '/services',
@@ -36,11 +41,6 @@ const GlobalPresenceRoute = GlobalPresenceRouteImport.update({
 const ContactRoute = ContactRouteImport.update({
   id: '/contact',
   path: '/contact',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const CommunityRoute = CommunityRouteImport.update({
-  id: '/community',
-  path: '/community',
   getParentRoute: () => rootRouteImport,
 } as any)
 const BusinessModelRoute = BusinessModelRouteImport.update({
@@ -63,32 +63,32 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/business-model': typeof BusinessModelRoute
-  '/community': typeof CommunityRoute
   '/contact': typeof ContactRoute
   '/global-presence': typeof GlobalPresenceRoute
   '/legal': typeof LegalRoute
   '/services': typeof ServicesRoute
+  '/value': typeof ValueRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/business-model': typeof BusinessModelRoute
-  '/community': typeof CommunityRoute
   '/contact': typeof ContactRoute
   '/global-presence': typeof GlobalPresenceRoute
   '/legal': typeof LegalRoute
   '/services': typeof ServicesRoute
+  '/value': typeof ValueRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/business-model': typeof BusinessModelRoute
-  '/community': typeof CommunityRoute
   '/contact': typeof ContactRoute
   '/global-presence': typeof GlobalPresenceRoute
   '/legal': typeof LegalRoute
   '/services': typeof ServicesRoute
+  '/value': typeof ValueRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -96,46 +96,53 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/business-model'
-    | '/community'
     | '/contact'
     | '/global-presence'
     | '/legal'
     | '/services'
+    | '/value'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/about'
     | '/business-model'
-    | '/community'
     | '/contact'
     | '/global-presence'
     | '/legal'
     | '/services'
+    | '/value'
   id:
     | '__root__'
     | '/'
     | '/about'
     | '/business-model'
-    | '/community'
     | '/contact'
     | '/global-presence'
     | '/legal'
     | '/services'
+    | '/value'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
   BusinessModelRoute: typeof BusinessModelRoute
-  CommunityRoute: typeof CommunityRoute
   ContactRoute: typeof ContactRoute
   GlobalPresenceRoute: typeof GlobalPresenceRoute
   LegalRoute: typeof LegalRoute
   ServicesRoute: typeof ServicesRoute
+  ValueRoute: typeof ValueRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/value': {
+      id: '/value'
+      path: '/value'
+      fullPath: '/value'
+      preLoaderRoute: typeof ValueRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/services': {
       id: '/services'
       path: '/services'
@@ -162,13 +169,6 @@ declare module '@tanstack/react-router' {
       path: '/contact'
       fullPath: '/contact'
       preLoaderRoute: typeof ContactRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/community': {
-      id: '/community'
-      path: '/community'
-      fullPath: '/community'
-      preLoaderRoute: typeof CommunityRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/business-model': {
@@ -199,11 +199,11 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
   BusinessModelRoute: BusinessModelRoute,
-  CommunityRoute: CommunityRoute,
   ContactRoute: ContactRoute,
   GlobalPresenceRoute: GlobalPresenceRoute,
   LegalRoute: LegalRoute,
   ServicesRoute: ServicesRoute,
+  ValueRoute: ValueRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
